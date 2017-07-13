@@ -53,7 +53,6 @@ You should as a minimum implement the following features. Each will likely requi
 * Should return null if no TODO with that `id` exists
 
 ### UPDATE
-
 #### Update(id, updatedParams)
 * Should be able to update the Todo with the given id, using the following KVPs (Key-Value Pairs) in the `updatedParams` object:
   * `name`
@@ -75,7 +74,13 @@ You should as a minimum implement the following features. Each will likely requi
 ## Bonus
 
 Currently the TODOs will disappear whenever the application is restarted. We can however, save the the TODOs array to a JSON file and load it again whenever the application starts. Find out how to do this and do it.
+//fs.writeFile to save it
+//fs.open to open it next day?
 
+OR why not just use this?
+var listValues = ['taco', 'burrito', { name: 'Brian' }];
+localStorage.myList = JSON.stringify(listValues);
+var listValues = JSON.parse(localStorage.myList);
 _**hint:** check the Node.js documentation for 'fs'_
 
 ---
